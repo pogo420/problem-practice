@@ -2,7 +2,7 @@ class Node:
     def __init__(self, val):
         self.val = val
         self.next = None
-		
+
 
 class LinkList:
 
@@ -11,7 +11,7 @@ class LinkList:
 
     def insert_item(self,val):
         trav = self.head
-        
+
         while trav.next:
             trav = trav.next
         trav.next = Node(val)
@@ -22,7 +22,7 @@ class LinkList:
         while trav:
             print(trav.val)
             trav = trav.next
-	
+
     def find(self, val):
         trav = self.head
 
