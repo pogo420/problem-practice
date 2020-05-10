@@ -16,6 +16,19 @@ class LinkList:
             trav = trav.next
         trav.next = Node(val)
 
+    def insert_node(self,node):
+        '''Add a full branch'''
+        trav = self.head
+        while trav.next:
+            trav = trav.next
+        trav.next = node
+
+    def insert_item_beg(self,val):
+        trav = self.head
+        temp = trav.next
+        trav.next = Node(val)
+        trav.next.next = temp
+
     def print_elements(self):
         trav = self.head
 
@@ -31,6 +44,15 @@ class LinkList:
                 return True
             trav = trav.next
         return False
+
+    def find_node(self, val):
+        trav = self.head
+
+        while trav:
+            if val == trav.val:
+                return trav
+            trav = trav.next
+        return None
 
     def delete(self, val):
         if not self.find(val):
