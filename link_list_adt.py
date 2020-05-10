@@ -17,7 +17,7 @@ class LinkList:
         trav.next = Node(val)
 
     def insert_node(self,node):
-        '''Add a full branch'''
+        '''Add a node'''
         trav = self.head
         while trav.next:
             trav = trav.next
