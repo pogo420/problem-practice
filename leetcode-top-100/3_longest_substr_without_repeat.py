@@ -10,6 +10,8 @@ class Solution:
 
         for char in s:
             if char in busket:
+                # after the last occourance, if match seen
+                # use this example to understand    a|b|c|d|e|f|c|a
                 start = max(start, busket.get(char) + 1)
             busket[char] = count
             lstr = max(lstr, count-start+1)
