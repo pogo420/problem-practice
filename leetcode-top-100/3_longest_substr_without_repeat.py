@@ -6,16 +6,21 @@ class Solution:
         busket: Dict = {}
         count = 0
         start = 0
-        lstr = float("-inf")
+        lstr = 0
+
         for char in s:
             if char in busket:
-                start = count
-                count += 1
-                continue
+                start = max(start, busket.get(char) + 1)
             busket[char] = count
-            lstr = max(count-start, lstr)
+            lstr = max(lstr, count-start+1)
             count += 1
         return lstr
 
 
-# a b c a b c d e a b c
+if __name__ == '__main__':
+    print(
+        Solution().lengthOfLongestSubstring("abcabcdeabcbc"),
+        Solution().lengthOfLongestSubstring("abcabcbb"),
+        Solution().lengthOfLongestSubstring("pwwkew"),
+    Solution().lengthOfLongestSubstring("abba")
+    )
