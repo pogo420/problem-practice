@@ -52,7 +52,7 @@ class Solution:
 
         if median_index1 == median_index2:
             return median_val  # for odd cases
-        return median_val/2 # for even cases
+        return median_val/2  # for even cases
 
 
 if __name__ == '__main__':
