@@ -57,6 +57,6 @@ class Solution:
 
 if __name__ == '__main__':
 
-    a = [1,3]
+    a = [1, 3]
     b = [2, 9, 10]
     print(Solution().findMedianSortedArrays_naive(a, b))
