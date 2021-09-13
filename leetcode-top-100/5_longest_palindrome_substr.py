@@ -3,7 +3,7 @@
 # Total O(n^3) complexity
 
 
-class Solution:
+class Solution_dp:
     def longestPalindrome(self, s: str) -> str:
         # less than 2 cases
         if len(s) == 1:
@@ -41,43 +41,37 @@ class Solution:
         return s[start_index:start_index+max_length]
 
 
-class Solution_jag:
+## mirror technique, Expland around the center
+class Solution:
+
     def longestPalindrome(self, s: str) -> str:
-        length = len(s)
-        count = 2
-        max_length = 0
-        start = 0
-        end = 0
-        dp = [
-            [0 for i in range(len(s))] for j in range(len(s))
-        ]
+        res = ""
+        res_length = 0
 
-        for i in range(length-1):
-            if s[i] == s[i+1]:
-                dp[i][i+1] = 1
-                if count > max_length:
-                    start = i
-                    end = i+1
-                    max_length = count
-            else:
-                dp[i][i + 1] = 0
-            dp[i][i] = 0
+        for i in range(len(s)):
+            # odd cases
+            l = i
+            r = i
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if r-l+1 > res_length:
+                    res = s[l:r+1]
+                    res_length = r-l+1
+                l -= 1
+                r += 1
 
-        for gap in range(2, length):
-            for i in range(length-gap):
-                j = gap + i
-
-                if (s[i] == s[j]) and (dp[i+1][j-1] == 1):
-                    dp[i][j]=1
-                    count = j-i+1
-                    if count > max_length:
-                        start = i
-                        end = i + 1
-                        max_length = count
-
-        return s[start:end+1]
+            # even cases
+            l = i
+            r = i +1
+            while l >= 0 and r < len(s) and s[l] == s[r]:
+                if r-l+1 > res_length:
+                    res = s[l:r+1]
+                    res_length = r-l+1
+                l -= 1
+                r += 1
+        return res
 
 
 if __name__ == '__main__':
-    # print(Solution().longestPalindrome("cbbp"))  # this use case is failing
+    print(Solution().longestPalindrome("cbbp"))  # this use case is failing
     print(Solution().longestPalindrome("aaaabbaa"))
+    print(Solution().longestPalindrome("aabbaaabcdefedcba"))
