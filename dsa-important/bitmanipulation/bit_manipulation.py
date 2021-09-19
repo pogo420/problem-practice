@@ -3,6 +3,7 @@
 # clear ith bit ? Create mask ~(1<<i)  and do  number & mask
 # number of bits(0 and 1) in a binary number n is logn + 1 (base: 2)
 # number of digits  a decimal number n is logn + 1 (base: 10)
+# number of bits to change for a -> b: DO xor to get changed bits. Count set bits.
 
 
 def cal_setbits(n: int):
