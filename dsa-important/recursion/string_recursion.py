@@ -20,8 +20,31 @@ def powersubsets(s: str, i: int, curr_s: str, result_set: list):
     powersubsets(s, i + 1, curr_s + s[i], result_set)  # include
 
 
+def swap(s: str, i: int, j: int):
+    data = [d for d in s]
+    temp = data[j]
+    data[j] = data[i]
+    data[i] = temp
+    return "".join(data)
+
+
+def permutation(s: str, i: int, result: list):
+    if i == len(s):  # base case when we reach end of string
+        result.append(s)
+        return
+
+    for curr_i in range(i, len(s)):  # iterating each combination
+        s = swap(s, curr_i, i)
+        permutation(s, i+1, result)
+        s = swap(s, curr_i, i)  # re-swapping as we go up
+
+
 if __name__ == '__main__':
     # print(isPalindrome("aba", 0, 2))
+    # array = []
+    # powersubsets("abc", 0, "", array)
+    # print(array)
+
     array = []
-    powersubsets("abc", 0, "", array)
+    permutation("abcd", 0, array)
     print(array)
