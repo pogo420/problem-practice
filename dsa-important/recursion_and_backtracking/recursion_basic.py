@@ -1,4 +1,4 @@
-# How to do recursion?
+# How to do recursion_and_backtracking?
 # Base case
 # Sub-problem <> problem relation
 # generalize the relation.
