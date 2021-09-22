@@ -1,5 +1,6 @@
 # A Backtracking program
 # in Python to solve Sudoku problem
+# 9 ^(n*n)
 
 # A Utility Function to print the Grid
 def print_grid(arr):
