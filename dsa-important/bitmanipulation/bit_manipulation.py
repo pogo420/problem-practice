@@ -17,7 +17,7 @@ def cal_setbits(n: int):
 
 
 def cal_setbits_opti(n: int):
-    """n & n-1 clears the LSB of n
+    """n & n-1 clears the LSB(left most) of n
        algorithm runs for # of set bits
        1101 count: 1
        1100 count: 2

@@ -20,6 +20,7 @@ def swap(array: list, index_1: int, index_2: int):
 
 def heapify(data_list: list, parent: int):
     """implementing heapify algorithm
+        It makes the tree below parent as heap.
         1. Find max/min of children.
         2. swap the max/min with the parent data.
         3. Run the logic for new swapped children.

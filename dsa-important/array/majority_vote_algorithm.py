@@ -1,4 +1,4 @@
-# which element is present more tha N//2 times.
+# which element is present more than N//2 times.
 
 
 def moores_majority_algorithm(array: list):

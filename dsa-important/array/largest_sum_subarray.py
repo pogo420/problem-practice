@@ -1,4 +1,4 @@
-# brute force - n^2 using two sub array.
+# brute force - n^2 using two loops.
 # kadence's algorithms: O(n) complexity.
 
 
