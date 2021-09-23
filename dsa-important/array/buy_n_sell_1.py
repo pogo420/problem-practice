@@ -1,2 +1,40 @@
 # discuss O(n^2)
 # discuss O(n) solutions
+
+def max_profit_1(data: list) -> int:
+
+    # calculating auxiliary data, max from that point till end.
+    # we get max value in future from that point we can easy calculate the diff
+    # O(n) time and space
+    aux: list = [0] * len(data)
+    i = len(data) - 1
+    while i >= 0:
+        aux[i] = max(data[i:])
+        i -= 1
+
+    j = 0
+    max_diff = 0
+    while j < len(data):
+        max_diff = max(max_diff, aux[j] - data[j])
+        j += 1
+
+    return max_diff
+
+
+def max_profit_2(data: list) -> int:
+    # we get min value in past from that point we can easy calculate the diff
+    # O(n) time O(1) space
+    local_min = data[0]
+    max_diff = 0
+
+    for d in data:
+        local_min = min(local_min, d)
+        max_diff = max(max_diff, d - local_min)
+
+    return max_diff
+
+
+if __name__ == '__main__':
+    a = [3, 1, 4, 8, 7, 2, 5]
+    print(max_profit_1(a))
+    print(max_profit_2(a))
