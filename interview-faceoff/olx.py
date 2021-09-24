@@ -10,3 +10,13 @@
 # Max: sum of two elements and propagating.
 # Notification service.
 # How to give system design interview.
+
+# questions to ask:
+# volume of data. ?
+# distributed. ?
+# user. ?
+# data sources. ?
+# logging?
+# data persistence ?
+# cache ?
+# data bases ?
