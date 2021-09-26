@@ -1,6 +1,7 @@
 # each pass max (asc) or min(desc) goes to the end of list, like bubble
 # we swap elements for n passes and each pass we compare n items so , O(n^2).
-# bubble can be used if we need to find
+# bubble can be used if we need to find.
+# after ith iteration , we will get i elements bubble out of unsorted list in sorted order.
 
 def bubble(data_):
     i = 0
