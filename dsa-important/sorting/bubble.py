@@ -24,4 +24,4 @@ def bubble(data_):
 if __name__ == '__main__':
     data = [4, 3, 7, 1, 5]
     bubble(data)
-    # print(data)
+    print(data)
