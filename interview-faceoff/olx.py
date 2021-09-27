@@ -20,3 +20,7 @@
 # data persistence ?
 # cache ?
 # data bases ?
+
+# 1 2 3 4
+# 3 6 10
+# find minimum sum
