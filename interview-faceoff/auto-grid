@@ -1,0 +1,35 @@
+
+#########################################################################################################
+#Write a function rotate(array[], d) that rotates array[] by d times.
+#You have to cover all the boundary cases. Please see given example for more details.
+# You can assume given d value is always an integer
+
+#Input :  arr[] = [10, 20, 30, 40, 50, 60, 70]
+#         d = 3
+#Output : arr[] = [40, 50, 60, 70, 10, 20, 30]
+
+#Input :  arr[] = [10, 20, 30, 40, 50, 60, 70]
+#         d = -3
+#Output : arr[] = [50, 60, 70, 10, 20, 30, 40]
+
+
+###########################################################################################################
+# Given an matrix of size MxN with following properties
+# 1. It only has 0s and 1s
+# 2. All 0s will be together and all 1s would be together in a ROW
+# 3. 0s will precede 1s (I.e. all 0s would come first) in a ROW
+
+# We have to find the row which has maximum number of 1s
+
+[[0,0,0,1,1,1,1],
+[0,0,1,1,1,1,1],
+[0,0,0,0,1,1,1],
+[0,0,0,0,0,1,1]]
+
+
+###########################################################################################################
+Give a stick of length n and a list of prices for pieces of the stick of length i , where 1 <=  i <= n, find the optimal way to cut the stick to maximize the profit
+length[] = [1, 2, 3, 4, 5, 6, 7, 8]
+price [] = [1, 5, 8, 9, 10, 17, 17, 20]
+Rod length: 4
+Best:Cut the rod into two pieces of length 2 each to gain revenue of 5 + 5 = 10
