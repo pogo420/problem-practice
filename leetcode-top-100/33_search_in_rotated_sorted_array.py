@@ -9,7 +9,7 @@ def find_pivot(data, left, right) -> int:
         return find_pivot(data, mid + 1, right)
 
     else:  # check first half for pivot
-        return find_pivot(data, left, mid + 1)
+        return find_pivot(data, left, mid - 1)
 
 
 if __name__ == '__main__':
