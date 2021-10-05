@@ -5,7 +5,7 @@ def remove_duplicates(array, duplicates):
     j = 0  # modifying the same array
     for i in range(len(array) - duplicates):
         if array[i] != array[i + duplicates]:
-            array[j] = array[i]
+            array[j] = array[i]  # ensures only unique with duplicates(22 or 2 or 222)
             j += 1
 
     # back fill logic
