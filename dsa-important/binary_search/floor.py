@@ -2,7 +2,7 @@ def floor_array(array: list, key):
     left = 0
     right = len(array) - 1
     res = -1
-    while left < right:
+    while left <= right:
         mid = (left + right) // 2
 
         # 3 6 9 45 floor of 7
