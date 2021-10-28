@@ -17,7 +17,25 @@ def remove_duplicates(array, duplicates):
     print(f"{j} elements are duplicates of {duplicates}")
 
 
+def remove_duplicates_spaces(array, duplicates):
+    space = {}
+    result = []
+    for i in array:
+        if i not in space:
+            space[i] = 1
+            result.append(i)
+        elif i in space and space[i] < duplicates:
+            result.append(i)
+            space[i] += 1
+        else:
+            space[i] += 1
+
+    print(result)
+
+
 if __name__ == '__main__':
     a = [0, 0, 1, 1, 1, 1, 2, 2, 3, 4]
     remove_duplicates(a, 2)
     print(a)
+    # remove_duplicates_spaces(a, 2)
+
